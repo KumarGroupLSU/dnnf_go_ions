@@ -1,0 +1,116 @@
+{
+    "_comment": "that's all",
+    "model": {
+        "type_map": [
+            "C",
+            "O",
+            "H",
+	    "Cl",
+	    "Na"
+        ],
+        "descriptor": {
+            "type": "se_e2_a",
+            "rcut_smth": 5.8,
+            "rcut": 6.0,
+            "sel": [
+                150,
+                100,
+                200,
+		50,
+		50
+            ],
+            "neuron": [
+                25,
+                50,
+                100
+            ],
+            "type_one_side": false,
+            "axis_neuron": 20,
+            "resnet_dt": true,
+            "seed": 32721102022
+        },
+        "fitting_net": {
+            "neuron": [
+                240,
+                240,
+                240
+
+            ],
+            "resnet_dt": true,
+            "seed": 32721102022
+        }
+    },
+    "loss": {
+        "start_pref_e": 0.01,
+        "limit_pref_e": 1,
+        "start_pref_f": 1000,
+        "limit_pref_f": 1,
+        "start_pref_v": 0,
+        "limit_pref_v": 0
+    },
+    "learning_rate": {
+        "type": "exp",
+        "start_lr": 0.001,
+        "stop_lr": 1.0E-8,
+        "decay_steps": 5000
+    },
+    "training": {
+        "stop_batch": 3000000,
+        "seed": 32721102022,
+        "_comment": "that's all",
+        "disp_file": "lcurve.out",
+        "disp_freq": 1000,
+        "numb_test": 10,
+        "save_freq": 1000,
+        "save_ckpt": "model.ckpt",
+        "disp_training": true,
+        "time_training": true,
+        "profiling": false,
+        "profiling_file": "timeline.json",
+        "training_data": {
+            "systems": [
+            
+		    "/work/gazom1/dnnp_go_ions/dataset/go2/train/go2_20_20_1_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2/train/go2_20_20_2_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2/train/go2_20_20_3_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2/train/go2_20_20_4_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2/train/go2_20_20_5_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2/spt-data-go2",
+		    "/work/gazom1/dnnp_go_ions/dataset/single_point/go2",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4/train/go4_20_20_1_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4/train/go4_20_20_2_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4/train/go4_20_20_3_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4/train/go4_20_20_4_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4/train/go4_20_20_5_NVT-00000-30000",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4/spt-data-go4",
+		    "/work/gazom1/dnnp_go_ions/dataset/single_point/go4",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_h3ocl/1/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_h3ocl/2/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_h3ocl/3/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_h3ocl/4/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_h3ocl/5/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/single_point/go2_h3ocl",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_h3ocl/1/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_h3ocl/2/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_h3ocl/3/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_h3ocl/4/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_h3ocl/5/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/single_point/go4_h3ocl",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_naoh/2/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_naoh/3/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_naoh/4/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go2_naoh/5/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/single_point/go2_naoh",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_naoh/1/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_naoh/2/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_naoh/3/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_naoh/4/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/go4_naoh/5/train",
+		    "/work/gazom1/dnnp_go_ions/dataset/single_point/go4_naoh"
+	    ],
+	    "auto_prob": "prob_sys_size; 0:14:0.2; 14:26:0.4; 26:31:0.2; 31:37:0.2",
+	    "set_prefix": "set",
+            "batch_size": "auto"
+        }
+    }
+}
